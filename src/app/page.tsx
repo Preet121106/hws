@@ -6,20 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
 import {
-  AnalyzeSentimentOutput,
   analyzeSentiment,
 } from "@/ai/flows/analyze-sentiment";
 import {
-  GenerateSuggestionsOutput,
   generateSuggestions,
 } from "@/ai/flows/generate-suggestions";
 import {
-  EnhanceBotInteractionOutput,
   enhanceBotInteraction,
 } from "@/ai/flows/enhance-bot-interaction";
-import { Separator } from "@/components/ui/separator";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Heart } from "lucide-react";
@@ -38,12 +33,6 @@ export default function Home() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const chatHistoryRef = useRef<HTMLDivElement>(null);
-  const [sentiment, setSentiment] = useState<AnalyzeSentimentOutput | null>(
-    null
-  );
-  const [suggestions, setSuggestions] = useState<
-    GenerateSuggestionsOutput | null
-  >(null);
   const [isThinking, setIsThinking] = useState(false);
   const { toast } = useToast();
 
@@ -68,14 +57,12 @@ export default function Home() {
     try {
       // 1. Analyze Sentiment
       const sentimentAnalysis = await analyzeSentiment({ text: input });
-      setSentiment(sentimentAnalysis);
 
       // 2. Generate Suggestions
       const suggestionGeneration = await generateSuggestions({
         userInput: input,
         sentiment: sentimentAnalysis.sentiment,
       });
-      setSuggestions(suggestionGeneration);
 
       // 3. Enhance Bot Interaction
       const botInteraction = await enhanceBotInteraction({
@@ -195,50 +182,6 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        {sentiment && (
-          <Card className="animate-fadeIn">
-            <CardContent>
-              <h3 className="text-lg font-semibold mb-2">
-                Sentiment Analysis
-              </h3>
-              <p>
-                <strong>Sentiment:</strong>{" "}
-                <Badge variant={sentiment.sentiment === 'positive' ? 'positive' : 'secondary'}>{sentiment.sentiment}</Badge>
-              </p>
-              <p>
-                <strong>Score:</strong> {sentiment.score.toFixed(2)}
-              </p>
-              <p>
-                <strong>Reason:</strong> {sentiment.reason}
-              </p>
-            </CardContent>
-          </Card>
-        )}
-
-        {suggestions && (
-          <Card className="animate-fadeIn">
-            <CardContent>
-              <h3 className="text-lg font-semibold mb-2">Suggestions</h3>
-              {suggestions.suggestions.length > 0 ? (
-                suggestions.suggestions.map((suggestion, index) => (
-                  <div key={index} className="mb-4">
-                    <h4 className="font-medium">{suggestion.title}</h4>
-                    <p className="text-sm">{suggestion.description}</p>
-                    <p className="text-xs text-muted-foreground">
-                      Relevance: {(suggestion.relevanceScore * 100).toFixed(0)}%
-                    </p>
-                    {index < suggestions.suggestions.length - 1 && (
-                      <Separator className="my-2" />
-                    )}
-                  </div>
-                ))
-              ) : (
-                <p>No suggestions available for this sentiment.</p>
-              )}
-            </CardContent>
-          </Card>
-        )}
-
         <div className="flex items-center gap-2">
           <Textarea
             placeholder="Enter your message..."
@@ -268,4 +211,5 @@ export default function Home() {
     </div>
   );
 }
+
 
