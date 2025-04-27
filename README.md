@@ -1,1 +1,1 @@
-r kichu bollo?....us niye? ba college chariye deoa niye?
+na  bolchhilo bari aste debena nijer takay porte kintu ota raage bolchhilo 
