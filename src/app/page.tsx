@@ -24,6 +24,7 @@ import { Toaster, toast } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
+import { Textarea } from "@/components/ui/textarea";
 
 const defaultAvatar = 'https://picsum.photos/id/237/200/300';
 
@@ -198,16 +199,17 @@ export default function Home() {
         )}
 
         <div className="flex items-center gap-2">
-          <Input
-            type="text"
+          <Textarea
             placeholder="Enter your message..."
             value={input}
             onChange={handleInputChange}
             onKeyDown={(e) => {
-              if (e.key === "Enter") {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
                 handleSendMessage();
               }
             }}
+            rows={1} 
           />
           <Button onClick={handleSendMessage} disabled={isThinking}>
             {isThinking ? (
@@ -225,4 +227,3 @@ export default function Home() {
     </div>
   );
 }
-
