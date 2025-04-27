@@ -1,2 +1,2 @@
-sorry amio tui j jabi na seita sune bhalo laglo tui may readme ta de ekbar amr hoye geche
-aunty ki bolchhe r ekhun ki korchhe?
+maa r kichu e boleni ei niye...sudhu bollo ami r ekbar dekhi diye ghumate chole gelo...<br>
+readme ta de re 
