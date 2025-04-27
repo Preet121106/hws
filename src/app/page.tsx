@@ -25,8 +25,9 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 
-const defaultAvatar = 'https://picsum.photos/id/237/200/300';
+const defaultAvatar = "https://picsum.photos/id/237/200/300";
 
 interface ChatMessage {
   role: "user" | "bot";
@@ -107,18 +108,29 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-background">
+    <div className="flex flex-col h-screen bg-warm-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Header */}
       <div className="bg-black text-white p-6 rounded-b-lg shadow-md flex justify-between items-center">
-        <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">Serene</h1>
+        <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-pulse">
+          Serene
+        </h1>
         <ModeToggle />
       </div>
 
       {/* Banner Section */}
-      <div className="bg-gradient-to-r from-gray-800 to-black text-white p-8 rounded-md shadow-lg m-4">
-        <h2 className="text-2xl font-bold mb-4">Welcome to Serene</h2>
-        <p className="text-lg">Your personal sentiment tracker and AI-powered assistant.</p>
-        <ul className="list-disc pl-5 mt-4">
+      <div
+        className={cn(
+          "bg-gradient-to-r from-gray-800 to-black text-white p-8 rounded-md shadow-lg m-4 transition-all duration-500",
+          messages.length > 0 ? "transform scale-95 opacity-70" : ""
+        )}
+      >
+        <h2 className="text-2xl font-bold mb-4 animate-fadeIn">
+          Welcome to Serene
+        </h2>
+        <p className="text-lg animate-fadeIn">
+          Your personal sentiment tracker and AI-powered assistant.
+        </p>
+        <ul className="list-disc pl-5 mt-4 animate-fadeInUp">
           <li>Understand your emotions with sentiment analysis</li>
           <li>Get personalized suggestions to improve your well-being</li>
           <li>Enjoy a supportive and intelligent chatbot experience</li>
@@ -151,7 +163,7 @@ export default function Home() {
                 </div>
               ))}
               {isThinking && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 animate-pulse">
                   <Avatar>
                     <AvatarImage src={defaultAvatar} alt="Bot Avatar" />
                     <AvatarFallback>Bot</AvatarFallback>
@@ -167,14 +179,14 @@ export default function Home() {
         </Card>
 
         {sentiment && (
-          <Card>
+          <Card className="animate-fadeIn">
             <CardContent>
               <h3 className="text-lg font-semibold mb-2">
                 Sentiment Analysis
               </h3>
               <p>
                 <strong>Sentiment:</strong>{" "}
-                <Badge>{sentiment.sentiment}</Badge>
+                <Badge variant={sentiment.sentiment === 'positive' ? 'positive' : 'secondary'}>{sentiment.sentiment}</Badge>
               </p>
               <p>
                 <strong>Score:</strong> {sentiment.score.toFixed(2)}
@@ -187,7 +199,7 @@ export default function Home() {
         )}
 
         {suggestions && (
-          <Card>
+          <Card className="animate-fadeIn">
             <CardContent>
               <h3 className="text-lg font-semibold mb-2">Suggestions</h3>
               {suggestions.suggestions.length > 0 ? (
@@ -221,7 +233,7 @@ export default function Home() {
                 handleSendMessage();
               }
             }}
-            rows={1} 
+            rows={1}
           />
           <Button onClick={handleSendMessage} disabled={isThinking}>
             {isThinking ? (
@@ -239,4 +251,3 @@ export default function Home() {
     </div>
   );
 }
-
