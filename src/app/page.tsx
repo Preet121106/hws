@@ -25,6 +25,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 
 const defaultAvatar = 'https://picsum.photos/id/237/200/300';
 
@@ -107,10 +108,22 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-secondary">
-      <div className="bg-primary text-primary-foreground p-6 rounded-b-lg shadow-md flex justify-between items-center">
-        <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Serene</h1>
+    <div className="flex flex-col h-screen bg-background">
+      {/* Header */}
+      <div className="bg-black text-white p-6 rounded-b-lg shadow-md flex justify-between items-center">
+        <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">Serene</h1>
         <ModeToggle />
+      </div>
+
+      {/* Banner Section */}
+      <div className="bg-gradient-to-r from-gray-800 to-black text-white p-8 rounded-md shadow-lg m-4">
+        <h2 className="text-2xl font-bold mb-4">Welcome to Serene</h2>
+        <p className="text-lg">Your personal sentiment tracker and AI-powered assistant.</p>
+        <ul className="list-disc pl-5 mt-4">
+          <li>Understand your emotions with sentiment analysis</li>
+          <li>Get personalized suggestions to improve your well-being</li>
+          <li>Enjoy a supportive and intelligent chatbot experience</li>
+        </ul>
       </div>
 
       <main className="flex flex-col flex-grow p-4 space-y-4">
@@ -227,4 +240,3 @@ export default function Home() {
     </div>
   );
 }
-
