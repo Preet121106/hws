@@ -1,3 +1,3 @@
-aunty baba ki bhabe bolechhe janina. baba amake jei bhabe bollo moneholo insta o jene geche ekhun baba proof chaichhe je amra kotha bolechhi
-amake submit korte hobe 5:30 modhay ami kaj kori ekhun 
-kichhu ekta submit kortei hobe
+toke ki bhabe bollo?
+ r maa bolche j github bole ekta app ache jeikhane code o kora jai chat o kor ajai
+ tui  r ekta gihub baba diye dekhiye de
