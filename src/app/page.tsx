@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -17,10 +16,10 @@ import {
 } from "@/ai/flows/enhance-bot-interaction";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Heart } from "lucide-react";
+import { Loader2, Heart, Search, Lightbulb, MessageSquare, Share } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import { Search, Lightbulb, MessageSquare } from "lucide-react";
+
 
 const defaultAvatar = "https://raw.githubusercontent.com/firebase/firebase-studio/main/assets/studio-icon-128.png";
 
@@ -42,7 +41,7 @@ export default function Home() {
     }
   }, [messages]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(e.target.value);
   };
 
@@ -83,6 +82,11 @@ export default function Home() {
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (error: any) {
       console.error("Error processing message:", error);
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem processing your message. Please try again.",
+      });
     } finally {
       setIsThinking(false);
     }
@@ -111,30 +115,30 @@ export default function Home() {
           Welcome to Serene
         </h2>
         <p className="text-lg animate-fadeIn text-center">
-          Your personal AI companion for understanding and improving your emotional well-being.
+          Your personal AI companion. Here to understand & support you.
         </p>
         <div className="flex flex-row justify-center items-center space-x-4 mt-4">
         
           <Card className="animate-fadeInUp" style={{animationDelay: '0.2s'}}>
             <CardContent className="p-4">
-              <p className="text-sm text-center">
-                <Search className="inline-block mr-1" /> Analyze your feelings.
+              <p className="text-sm text-center text-white">
+                <Search className="inline-block mr-1 text-white" /> Analyze your feelings.
               </p>
             </CardContent>
           </Card>
 
           <Card className="animate-fadeInUp" style={{animationDelay: '0.4s'}}>
             <CardContent className="p-4">
-              <p className="text-sm text-center">
-                <Lightbulb className="inline-block mr-1" /> Receive personalized support.
+              <p className="text-sm text-center text-white">
+                <Lightbulb className="inline-block mr-1 text-white" /> Receive personalized support.
               </p>
             </CardContent>
           </Card>
 
           <Card className="animate-fadeInUp" style={{animationDelay: '0.6s'}}>
             <CardContent className="p-4">
-              <p className="text-sm text-center">
-                <MessageSquare className="inline-block mr-1" /> Chat with a caring AI.
+              <p className="text-sm text-center text-white">
+                <MessageSquare className="inline-block mr-1 text-white" /> Chat with a caring AI.
               </p>
             </CardContent>
           </Card>
@@ -202,7 +206,7 @@ export default function Home() {
                 Sending...
               </>
             ) : (
-              "Send"
+              <Share className="h-4 w-4" />
             )}
           </Button>
         </div>
@@ -211,5 +215,4 @@ export default function Home() {
     </div>
   );
 }
-
 
