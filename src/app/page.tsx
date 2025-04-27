@@ -20,12 +20,11 @@ import {
   enhanceBotInteraction,
 } from "@/ai/flows/enhance-bot-interaction";
 import { Separator } from "@/components/ui/separator";
-import { Toaster, toast } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
 
 const defaultAvatar = 'https://picsum.photos/id/237/200/300';
 
@@ -240,3 +239,4 @@ export default function Home() {
     </div>
   );
 }
+
