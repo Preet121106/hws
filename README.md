@@ -1,3 +1,2 @@
-ki bollo uncle?
-amr ei code ta hoy eeseche ami kore diye dicchi
+oi je ss pathate ami sudhu git hub er e pathabo
 
