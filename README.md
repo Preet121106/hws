@@ -1,2 +1,1 @@
-5 pm er modhay korte hobe 
-5:30 te submission bolchhe  TT
+oi maa r phone  e mail geche j tui amy invitation pathiyhcis dioye uncle k boleche..plz bolis areh bhule chole gechilo ami amr bondhu k pathate giye chole geche
