@@ -22,7 +22,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2 } from "lucide-react";
+import { Loader2, Heart } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
@@ -107,7 +107,7 @@ export default function Home() {
         <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-pulse flex items-center">
         <Avatar className="mr-2 h-6 w-6">
                       <AvatarImage src={defaultAvatar} alt="Bot Avatar" />
-                      <AvatarFallback>Bot</AvatarFallback>
+                      <AvatarFallback><Heart /></AvatarFallback>
                     </Avatar>Serene
         </h1>
       </div>
@@ -125,11 +125,32 @@ export default function Home() {
         <p className="text-lg animate-fadeIn text-center">
           Your personal AI companion for understanding and improving your emotional well-being.
         </p>
-        <ul className="list-disc pl-5 mt-4 animate-fadeInUp text-center">
-          <li>Analyze your feelings.</li>
-          <li>Receive personalized support.</li>
-          <li>Chat with a caring AI.</li>
-        </ul>
+        <div className="flex flex-row justify-center items-center space-x-4 mt-4">
+        
+          <Card className="animate-fadeInUp" style={{animationDelay: '0.2s'}}>
+            <CardContent className="p-4">
+              <p className="text-sm text-center">
+                <Heart className="inline-block mr-1" /> Analyze your feelings.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="animate-fadeInUp" style={{animationDelay: '0.4s'}}>
+            <CardContent className="p-4">
+              <p className="text-sm text-center">
+                <Heart className="inline-block mr-1" /> Receive personalized support.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="animate-fadeInUp" style={{animationDelay: '0.6s'}}>
+            <CardContent className="p-4">
+              <p className="text-sm text-center">
+                <Heart className="inline-block mr-1" /> Chat with a caring AI.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
 
       <main className="flex flex-col flex-grow p-4 space-y-4">
@@ -149,7 +170,7 @@ export default function Home() {
                   {message.role === "bot" && (
                     <Avatar>
                       <AvatarImage src={defaultAvatar} alt="Bot Avatar" />
-                      <AvatarFallback>Bot</AvatarFallback>
+                      <AvatarFallback><Heart /></AvatarFallback>
                     </Avatar>
                   )}
                   <div className="flex flex-col rounded-md p-3 shadow-md w-3/4">
@@ -161,7 +182,7 @@ export default function Home() {
                 <div className="flex items-center gap-2 animate-pulse">
                   <Avatar>
                     <AvatarImage src={defaultAvatar} alt="Bot Avatar" />
-                    <AvatarFallback>Bot</AvatarFallback>
+                    <AvatarFallback><Heart /></AvatarFallback>
                   </Avatar>
                   <div className="flex items-center gap-2">
                     <Loader2 className="animate-spin h-4 w-4" />
