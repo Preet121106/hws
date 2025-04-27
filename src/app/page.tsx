@@ -123,12 +123,12 @@ export default function Home() {
           Welcome to Serene
         </h2>
         <p className="text-lg animate-fadeIn text-center">
-          Your personal sentiment tracker and AI-powered assistant.
+          Your personal AI companion for understanding and improving your emotional well-being.
         </p>
         <ul className="list-disc pl-5 mt-4 animate-fadeInUp text-center">
-          <li>Understand your emotions with sentiment analysis</li>
-          <li>Get personalized suggestions to improve your well-being</li>
-          <li>Enjoy a supportive and intelligent chatbot experience</li>
+          <li>Analyze your feelings.</li>
+          <li>Receive personalized support.</li>
+          <li>Chat with a caring AI.</li>
         </ul>
       </div>
 
@@ -246,5 +246,3 @@ export default function Home() {
     </div>
   );
 }
-
-
