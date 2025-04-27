@@ -96,12 +96,6 @@ export default function Home() {
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (error: any) {
       console.error("Error processing message:", error);
-      toast({
-        title: "Error",
-        description:
-          error.message || "Failed to process your message. Please try again.",
-        variant: "destructive",
-      });
     } finally {
       setIsThinking(false);
     }
@@ -120,17 +114,17 @@ export default function Home() {
       {/* Banner Section */}
       <div
         className={cn(
-          "bg-gradient-to-r from-gray-800 to-black text-white p-8 rounded-md shadow-lg m-4 transition-all duration-500",
+          "bg-gradient-to-r from-gray-800 to-black text-white p-8 rounded-md shadow-lg m-4 transition-all duration-500 flex flex-col items-center justify-center",
           messages.length > 0 ? "transform scale-95 opacity-70" : ""
         )}
       >
-        <h2 className="text-2xl font-bold mb-4 animate-fadeIn">
+        <h2 className="text-2xl font-bold mb-4 animate-fadeIn text-center">
           Welcome to Serene
         </h2>
-        <p className="text-lg animate-fadeIn">
+        <p className="text-lg animate-fadeIn text-center">
           Your personal sentiment tracker and AI-powered assistant.
         </p>
-        <ul className="list-disc pl-5 mt-4 animate-fadeInUp">
+        <ul className="list-disc pl-5 mt-4 animate-fadeInUp text-center">
           <li>Understand your emotions with sentiment analysis</li>
           <li>Get personalized suggestions to improve your well-being</li>
           <li>Enjoy a supportive and intelligent chatbot experience</li>
