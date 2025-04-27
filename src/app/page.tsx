@@ -109,7 +109,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen bg-secondary">
       <div className="bg-primary text-primary-foreground p-6 rounded-b-lg shadow-md flex justify-between items-center">
-        <h1 className="text-3xl font-semibold">Serene</h1>
+        <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Serene</h1>
         <ModeToggle />
       </div>
 
@@ -227,3 +227,4 @@ export default function Home() {
     </div>
   );
 }
+
