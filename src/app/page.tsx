@@ -25,6 +25,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2, Heart } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { Search, Lightbulb, MessageSquare } from "lucide-react";
 
 const defaultAvatar = "https://raw.githubusercontent.com/firebase/firebase-studio/main/assets/studio-icon-128.png";
 
@@ -104,7 +105,7 @@ export default function Home() {
     <div className="flex flex-col h-screen bg-warm-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Header */}
       <div className="bg-black text-white p-6 rounded-b-lg shadow-md flex justify-between items-center">
-        <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-pulse flex items-center">
+        <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-pulse flex items-center justify-center">
         <Avatar className="mr-2 h-6 w-6">
                       <AvatarImage src={defaultAvatar} alt="Bot Avatar" />
                       <AvatarFallback><Heart /></AvatarFallback>
@@ -130,7 +131,7 @@ export default function Home() {
           <Card className="animate-fadeInUp" style={{animationDelay: '0.2s'}}>
             <CardContent className="p-4">
               <p className="text-sm text-center">
-                <Heart className="inline-block mr-1" /> Analyze your feelings.
+                <Search className="inline-block mr-1" /> Analyze your feelings.
               </p>
             </CardContent>
           </Card>
@@ -138,7 +139,7 @@ export default function Home() {
           <Card className="animate-fadeInUp" style={{animationDelay: '0.4s'}}>
             <CardContent className="p-4">
               <p className="text-sm text-center">
-                <Heart className="inline-block mr-1" /> Receive personalized support.
+                <Lightbulb className="inline-block mr-1" /> Receive personalized support.
               </p>
             </CardContent>
           </Card>
@@ -146,7 +147,7 @@ export default function Home() {
           <Card className="animate-fadeInUp" style={{animationDelay: '0.6s'}}>
             <CardContent className="p-4">
               <p className="text-sm text-center">
-                <Heart className="inline-block mr-1" /> Chat with a caring AI.
+                <MessageSquare className="inline-block mr-1" /> Chat with a caring AI.
               </p>
             </CardContent>
           </Card>
@@ -267,3 +268,4 @@ export default function Home() {
     </div>
   );
 }
+
