@@ -1,61 +1,118 @@
-# Serene-AI
+# 🌸 Serene-ai
+![Built with React](https://img.shields.io/badge/Built%20with-React-61DAFB?logo=react&logoColor=white&style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9C%94%EF%B8%8F-brightgreen?style=for-the-badge)
+![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-ff69b4?style=for-the-badge)
 
-## Overview
-This project is a simple chatbot built using **TypeScript** and the **Gemini API**, incorporating **sentiment analysis** with an **event-stream architecture** for real-time responses.
+A beautiful and calming sentiment-tracking app that helps users understand their emotions and offers personalized solutions using AI. ✨
 
-## Features
-- **Real-time streaming responses** (similar to ChatGPT)
-- **Sentiment analysis** for analyzing user input
-- **TypeScript** for type safety and maintainability
-- **Gemini API** integration for natural language understanding
-- **Event-stream architecture** for efficient message handling
+---
 
-## Technologies Used
-- **TypeScript**
-- **Nextjs** (for frontend)
-- **Gemini API** (for chatbot responses)
-- **Sentiment Analysis Library** (e.g., `sentiment` or `compromise`)
-- **Event Streams** (Server-Sent Events or WebSockets)
+## 📜 AIWS Hackfest - Terms & Conditions Compliance
 
-## Installation
-### Prerequisites
-- **Node.js** (v16 or later)
-- **Gemini API Key**
+### 📌 General Rules:
 
-### Steps
+- **Hackathon Duration:** 6 hours ⏱️  
+- **Team Size:** Solo project 👤  
+- **AWS Service Used:** ❌ *Not used* (Opting out)  
+- **Fullstack Implementation:** ✅  
+  - Frontend: Web app using **React** ⚛️
+  - Backend: Node.js serverless functions 🌐
+  - AI Integration: Pre-trained Sentiment Analysis API 🤖
+- **Libraries & Frameworks:**  
+  - React.js ⚛️
+  - TailwindCSS 🎨
+  - Node.js 🛠️
+
+---
+
+## 🚀 Submission Requirements:
+
+- **GitHub Repository:** [🔗Serene](https://github.com/B4S4B33/serene-ai.git)  
+- **Demo Video:** [🎥 Demo Link Here]
+
+- **AWS Services Used:** ❌ *None*
+
+- **AI Tools Used:**
+  - Pre-trained Sentiment Analysis API 🤖
+  - Google Gemini AI
+
+---
+
+## ✨ Features:
+
+- 🧠 Real-time sentiment detection from user inputs
+- 🎯 Personalized suggestions based on mood (activities, quotes, music)
+- 🎨 User-friendly and calming UI for a serene experience
+
+---
+
+## 🏆 Judging Criteria Fulfillment:
+
+- **Innovation / Creativity:**  
+  🌈 Combines sentiment tracking with wellness support
+
+- **AWS Service Usage:**  
+  ❌ No AWS usage (as per submission)
+
+- **Fullstack Implementation:**  
+  ✅ React Frontend + Node.js Backend + AI Integration
+
+- **Execution within 6 Hours:**  
+  ✅ Fully completed within hackathon limits
+
+- **Scalability Potential:**  
+  ⚡ Designed using scalable serverless backend architecture
+
+---
+
+## 🌟 Bonus Points Highlights:
+
+- **Most Creative AI Application:**  
+  🧠 Smart use of sentiment detection to promote mental well-being
+
+- **Clean and User-friendly UI:**  
+  🎨 Beautiful, soft-toned frontend design using TailwindCSS
+
+---
+
+## 🖼️ Screenshots:
+
+*(Add screenshots here if available)*
+
+---
+
+## 🛠️ How to Run Locally:
+
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/rishabh3562/sentiment-analysis-chatbot-js.git
-   cd sentiment-analysis-chatbot-js
-   ```
+    ```bash
+    git clone https://github.com/your-repo/serene.git
+    cd serene
+    ```
+
 2. Install dependencies:
-   ```sh
-   npm install
-   ```
-3. Create a `.env` file and add your API key:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-4. Start the server:
-   ```sh
-   npm run dev
-   ```
+    ```bash
+    npm install
+    ```
 
-## Usage
-- Run the server and send a POST request to `/chat` with user input.
-- The chatbot will return a streaming response with sentiment analysis insights.
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
 
-## API Endpoints
-| Method | Endpoint | Description |
-|--------|------------|-------------|
-| POST   | `/chat`   | Sends a message and receives a streaming chatbot response |
+---
 
-## Example Request
-```sh
-curl -X POST http://localhost:3000/chat -H "Content-Type: application/json" -d '{"message": "Hello! How are you?"}'
-```
+## 🔮 Future Scope:
 
-## Future Enhancements
-- WebSocket support for two-way communication.
-- UI integration with React.
-- Multi-language support.
+- 🎤 Integrate voice input sentiment detection
+- 📔 Expand solutions with journaling, meditation, and therapy guides
+- 🔔 Push notifications for daily emotional check-ins and mental health nudges
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+> **Crafted with ❤️ to spread a little more serenity into the world.** 🌸
