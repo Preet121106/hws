@@ -1,1 +1,1 @@
-amader sathe erom keno hoy... sorry amr tor theke help neoya uchit chhilo na ekhun amr kaj amakei korte hoto... na chhere jabo na
+sorry amio ta sune bhalo laglo tui may readme ta de ekbar amr hoye geche
