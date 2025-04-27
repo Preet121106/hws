@@ -1,4 +1,2 @@
-uncle k bol sry baba r hbe na..ami code r jnnei pathiyechilam kintu o accept koreni invitation ta.
-bolechhi
-tui chinta koris na tor opor kono dosh dini
-r git hub e upload kore de amake 5 min er modhay submit korte hobe
+tui o chinta koris na tor opr o kono dosh dini...ami bolehci hoitoh bhule pathiye diyeche
+tui tor vs code r readme ta de 
