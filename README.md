@@ -1,2 +1,1 @@
-areh bol j na kotha bolina github e bhul kore chole geche
-ami ei dike samle niyechi....insta dekheni maa..janeina 
+aunty baba ki bhabe bolechhe janina. baba amake jei bhabe bollo moneholo insta o jene geche ekhun baba proof chaichhe je amra kotha bolechhi
