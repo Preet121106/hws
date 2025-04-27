@@ -1,5 +1,2 @@
-maa r kichu e boleni ei niye...sudhu bollo ami r ekbar dekhi diye ghumate chole gelo...<br>
-readme ta de re 
-
-<br> oi?
-konta?
+tor amr opr trust thakle ami kal k ei niye kotha bolbo..plz tar age kich ubhabis na
+r ami ekhn github e code push koch r kichu likhis na...ami kal k ei niye kotha hbe ok baby?
