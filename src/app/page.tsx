@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useRef, useEffect } from "react";
@@ -24,6 +23,7 @@ import { Separator } from "@/components/ui/separator";
 import { Toaster, toast } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const defaultAvatar = 'https://picsum.photos/id/237/200/300';
 
@@ -107,11 +107,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen bg-secondary">
-      <div className="bg-primary text-primary-foreground p-6 rounded-b-lg shadow-md">
-        <h1 className="text-3xl font-semibold text-center">Serene</h1>
-        <p className="text-sm text-center mt-2">
-          Your personal sentiment tracker chatbot
-        </p>
+      <div className="bg-primary text-primary-foreground p-6 rounded-b-lg shadow-md flex justify-between items-center">
+        <h1 className="text-3xl font-semibold">Serene</h1>
+        <ModeToggle />
       </div>
 
       <main className="flex flex-col flex-grow p-4 space-y-4">
@@ -227,3 +225,4 @@ export default function Home() {
     </div>
   );
 }
+
