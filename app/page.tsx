@@ -14,7 +14,7 @@ export default function Home() {
       <header className="sticky top-0 z-10 bg-white border-b">
         <div className="container flex items-center justify-between h-16 mx-auto px-4">
           <h1 className="text-xl font-bold text-gray-900">
-            Sentiment Analysis Chatbot
+            Serene
           </h1>
           <Button
             variant="outline"

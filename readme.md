@@ -1,4 +1,4 @@
-# Simple Chatbot with TypeScript, Gemini API, and Sentiment Analysis
+# Serene-AI
 
 ## Overview
 This project is a simple chatbot built using **TypeScript** and the **Gemini API**, incorporating **sentiment analysis** with an **event-stream architecture** for real-time responses.
@@ -56,10 +56,6 @@ curl -X POST http://localhost:3000/chat -H "Content-Type: application/json" -d '
 ```
 
 ## Future Enhancements
-- WebSocket support for two-way communication
-- UI integration with React
-- Multi-language support
-
-## License
-This project is licensed under the MIT License.
-
+- WebSocket support for two-way communication.
+- UI integration with React.
+- Multi-language support.
