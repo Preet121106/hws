@@ -1,5 +1,2 @@
-git comkm# Firebase Studio
-
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+haa xopy paste kore de
+r bhabis na baby ami kalk kotha bolchi tor sathe jodimaa jai office <br> ora jeita template diyeche seitao patha
