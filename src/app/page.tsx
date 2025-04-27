@@ -23,11 +23,10 @@ import { Separator } from "@/components/ui/separator";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
-import { ModeToggle } from "@/components/mode-toggle";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
-const defaultAvatar = "https://picsum.photos/id/237/200/300";
+const defaultAvatar = "https://raw.githubusercontent.com/firebase/firebase-studio/main/assets/studio-icon-128.png";
 
 interface ChatMessage {
   role: "user" | "bot";
@@ -106,9 +105,11 @@ export default function Home() {
       {/* Header */}
       <div className="bg-black text-white p-6 rounded-b-lg shadow-md flex justify-between items-center">
         <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-pulse flex items-center">
-          <Loader2 className="mr-2 h-6 w-6" /> Serene
+        <Avatar className="mr-2 h-6 w-6">
+                      <AvatarImage src={defaultAvatar} alt="Bot Avatar" />
+                      <AvatarFallback>Bot</AvatarFallback>
+                    </Avatar>Serene
         </h1>
-        <ModeToggle />
       </div>
 
       {/* Banner Section */}
@@ -245,3 +246,4 @@ export default function Home() {
     </div>
   );
 }
+
